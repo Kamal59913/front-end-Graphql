@@ -1,0 +1,9 @@
+overwrite: true
+schema: "http://localhost:8080/graphql" # Corrected schema URL
+documents: "src/graphql/queries/**/*.graphql" # Path to your GraphQL query documents
+generates:
+  src/graphql/generated/schema.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
